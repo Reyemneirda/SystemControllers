@@ -44,12 +44,17 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UII
         
         let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
             print("User Selectec Camera")
+            
             })
         alertController.addAction(cameraAction)
         
         
         let photoLibrary = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
             print("User Photo Library")
+            
+            imagePicker.sourceType = .photoLibrary
+            
+            self.present(imagePicker,animated: true,completion: nil)
         })
         alertController.addAction(photoLibrary)
         
