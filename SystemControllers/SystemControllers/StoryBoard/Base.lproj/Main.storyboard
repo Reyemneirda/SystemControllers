@@ -70,7 +70,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="emailButton" destination="g8b-AQ-AKh" id="ZJ6-br-AQq"/>
                         <outlet property="imageView" destination="V2p-rM-sSL" id="HKW-yp-1W4"/>
+                        <outlet property="photoButton" destination="b5T-cS-bxu" id="hYy-QK-5Zv"/>
+                        <outlet property="safariButton" destination="Ufb-Of-9eq" id="tq1-e2-4Yz"/>
+                        <outlet property="shareButton" destination="YZA-xg-Lg6" id="rlc-lu-FqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
