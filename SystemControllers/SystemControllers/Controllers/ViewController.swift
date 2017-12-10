@@ -32,9 +32,15 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         present(activityController, animated: true, completion: nil)
     }
 
-    @IBAction func takePhoto(_ sender: Any)
+    @IBAction func takePhoto(_ sender: UIButton)
     {
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
         
+        alertController.popoverPresentationController?.sourceView = sender
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func safariButton(_ sender: Any)
