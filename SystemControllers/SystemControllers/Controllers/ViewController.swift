@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sharePhoto(_ sender: Any) {
+        guard let image = self.imageView.image else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityController.popoverPresentationController?.sourceView = sender as? UIView
         
+        present(activityController, animated: true, completion: nil)
     }
 
     @IBAction func takePhoto(_ sender: Any) {
@@ -26,6 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func safariButton(_ sender: Any) {
+        
         
     }
     
