@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func sharePhoto(_ sender: Any) {
+        
     }
 
+    @IBAction func takePhoto(_ sender: Any) {
+        
+    }
+    
+    @IBAction func safariButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func emailButton(_ sender: Any) {
+        
+    }
+    
+    
 
 }
 
