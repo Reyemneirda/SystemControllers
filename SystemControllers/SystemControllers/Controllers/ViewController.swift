@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 import SafariServices
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var photoButton: UIButton!
@@ -34,13 +34,30 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBAction func takePhoto(_ sender: UIButton)
     {
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
-        alertController.popoverPresentationController?.sourceView = sender
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
+            print("User Selectec Camera")
+            })
+        alertController.addAction(cameraAction)
         
+        
+        let photoLibrary = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
+            print("User Photo Library")
+        })
+        alertController.addAction(photoLibrary)
+        
+        
+        alertController.popoverPresentationController?.sourceView = sender
+
         present(alertController, animated: true, completion: nil)
+
     }
     
     @IBAction func safariButton(_ sender: Any)
