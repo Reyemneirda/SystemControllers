@@ -24,10 +24,34 @@
                                     <constraint firstAttribute="width" secondItem="V2p-rM-sSL" secondAttribute="height" multiplier="1:1" id="8y4-xP-ITh"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-B3-jQs">
+                                <rect key="frame" x="0.0" y="403" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZA-xg-Lg6">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5T-cS-bxu">
+                                        <rect key="frame" x="97" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Photo"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-Of-9eq">
+                                        <rect key="frame" x="194" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Safari"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-AQ-AKh">
+                                        <rect key="frame" x="291" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V2p-rM-sSL" secondAttribute="trailing" id="626-NX-qDP"/>
+                            <constraint firstItem="JMR-B3-jQs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ba-V7-lMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMR-B3-jQs" secondAttribute="trailing" id="BDL-f9-eXH"/>
+                            <constraint firstItem="JMR-B3-jQs" firstAttribute="top" secondItem="V2p-rM-sSL" secondAttribute="bottom" constant="8" id="ZhB-W3-A19"/>
                             <constraint firstItem="V2p-rM-sSL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uVm-Iu-bkL"/>
                             <constraint firstItem="V2p-rM-sSL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vMQ-Qn-fFi"/>
                         </constraints>
